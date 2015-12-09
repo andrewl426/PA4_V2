@@ -47,6 +47,10 @@ int vertex::getPathWeight() const
 {
 	return _path_weight;
 }
+stack<int> vertex::get_path_of_ids()
+{
+	return _path_of_ids;
+}
 
 // Setters
 void vertex::set_id(int new_id)
@@ -64,6 +68,10 @@ void vertex::set_load_factor(int new_load_factor)
 void vertex::set_path_weight(int new_weight)
 {
 	_path_weight = new_weight;
+}
+void vertex::set_path_of_ids(stack<int> new_path_ids)
+{
+	_path_of_ids = new_path_ids;
 }
 
 // Methods
