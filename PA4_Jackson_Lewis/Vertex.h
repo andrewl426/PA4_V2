@@ -21,7 +21,7 @@ public:
 	int _load_factor;
 	int _path_weight;
 	static int _id_counter;
-	stack<int> _path_of_ids;
+	stack<unordered_map<int, int>> _path_of_ids;
 
 
 	// Constructors
@@ -37,14 +37,14 @@ public:
 	unordered_map<vertex*, int> get_edges();
 	int get_load_factor();
 	int getPathWeight() const;
-	stack<int> get_path_of_ids();
+	stack<unordered_map<int, int>> get_path_of_ids();
 
 	// Setters
 	void set_id(int new_id);
 	void set_edges(unordered_map<vertex*, int> new_edges);
 	void set_load_factor(int new_load_factor);
 	void set_path_weight(int new_weight);
-	void set_path_of_ids(stack<int> new_path_ids);
+	void set_path_of_ids(stack<unordered_map<int, int>> new_path_ids);
 
 	// Methods
 private:
