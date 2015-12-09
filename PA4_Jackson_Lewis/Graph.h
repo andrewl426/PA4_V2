@@ -35,7 +35,7 @@ public:
 	void set_vertices(unordered_map<int, vertex> new_vertices);
 
 	// Methods
-	unordered_map<vertex, path> computeShortestPath(vertex *start, int starting_vertex, int ending_vertex);
+	unordered_map<vertex, path> computeShortestPath(vertex *start);
 	
 private:
 };
