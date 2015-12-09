@@ -83,10 +83,10 @@ unordered_map<vertex, path> graph::computeShortestPath(vertex *start)
 			{
 				//make known
 				int current_path_weight = top.getPathWeight();
-				path temp_path = top.getPath();
-				temp_path.set_distance_traveled(current_path_weight);
-				temp_path.push_vertex(top);
-				top.set_path(temp_path);
+				stack<unordered_map<int, int>> temp_path = top.get_path_of_ids();
+				temp_path.top()[top.get_id()] = current_path_weight;
+				temp_path.push(top.get_path_of_ids().top());
+				top.set_path_of_ids(temp_path);
 				paths[top] = temp_path;
 				
 				//push on outgoing edges
